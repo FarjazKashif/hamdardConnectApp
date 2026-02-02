@@ -8,20 +8,11 @@
     "scheme": "hamdardconnect",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "plugins": [
-      [
-        "expo-splash-screen",
-        {
-          "backgroundColor": "#232323",
-          "image": "./assets/images/splash.png",
-          "dark": {
-            "image": "./assets/images/splash.png",
-            "backgroundColor": "#000000"
-          },
-          "resizeMode": "contain"
-        }
-      ]
-    ],
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
       "supportsTablet": true
     },
