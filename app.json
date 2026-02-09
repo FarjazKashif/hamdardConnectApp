@@ -28,13 +28,16 @@
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
+      "output": "server", // we have   to convert it from static to server to run API calling
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
+        {
+          "origin": "https://uber.dev/"
+        },
         {
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
