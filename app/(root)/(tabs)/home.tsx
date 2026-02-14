@@ -1,5 +1,5 @@
 import { useAuth, useUser } from "@clerk/clerk-expo";
-import * as Location from "expo-location";
+// import * as Location from "expo-location";
 import { router } from "expo-router";
 import { useEffect, useState } from "react";
 import {
@@ -41,24 +41,24 @@ const Home = () => {
 
   useEffect(() => {
     (async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
+      // let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== "granted") {
         setHasPermission(false);
         return;
       }
 
-      let location = await Location.getCurrentPositionAsync({});
+      // let location = await Location.getCurrentPositionAsync({});
 
-      const address = await Location.reverseGeocodeAsync({
-        latitude: location.coords?.latitude!,
-        longitude: location.coords?.longitude!,
-      });
+      // const address = await Location.reverseGeocodeAsync({
+      //   latitude: location.coords?.latitude!,
+      //   longitude: location.coords?.longitude!,
+      // });
 
-      setUserLocation({
-        latitude: location.coords?.latitude,
-        longitude: location.coords?.longitude,
-        address: `${address[0].name}, ${address[0].region}`,
-      });
+      // setUserLocation({
+      //   latitude: location.coords?.latitude,
+      //   longitude: location.coords?.longitude,
+      //   address: `${address[0].name}, ${address[0].region}`,
+      // });
     })();
   }, []);
 
@@ -69,7 +69,7 @@ const Home = () => {
   }) => {
     setDestinationLocation(location);
 
-    router.push("/(root)/find-ride");
+    // router.push("/(root)/find-ride");
   };
 
   return (
