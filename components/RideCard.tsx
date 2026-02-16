@@ -6,6 +6,7 @@ import { Ride } from "@/types/type";
 
 const RideCard = ({ ride }: { ride: Ride }) => {
   return (
+    // Initial Commit
     <View className="flex flex-row items-center justify-center bg-white rounded-lg shadow-sm shadow-neutral-300 mb-3">
       <View className="flex flex-col items-start justify-center p-3">
         <View className="flex flex-row items-center justify-between">
